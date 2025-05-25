@@ -1,25 +1,29 @@
 package top.keir.mybatis;
 
-import com.baomidou.mybatisplus.core.toolkit.IdWorker;
-import org.dromara.hutool.core.data.id.IdUtil;
-import org.dromara.hutool.core.data.id.Snowflake;
-import org.dromara.hutool.core.text.StrUtil;
+import lombok.extern.slf4j.Slf4j;
+import org.dromara.hutool.core.collection.CollUtil;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
+@Slf4j
 public class Demo {
 
     @Test
     public void test() {
-        String  s = ",a,b,c,";
-        List<String> list = Arrays.stream(s.split(",")).filter(StrUtil::isNotBlank).toList();
-        String[] split = s.split(",");
-        System.out.println(Arrays.toString(split));
+        Set<Integer> list0 = Set.of(1, 2, 3, 4, 5);
+        Set<Integer> list1 = Set.of(1, 2, 3, 4, 5);
+        System.out.println("list0.equals(list1) = " + list0.equals(list1));
+        Set<Integer> list2 = Set.of(1, 2, 3, 4, 6);
+        // 新增
+        Set<Integer> addSet = list2.stream().filter(item -> !list0.contains(item)).collect(Collectors.toSet());
+        // 删除
+        Set<Integer> delSet = list0.stream().filter(item -> !list2.contains(item)).collect(Collectors.toSet());
+        log.info("addSet = {}, delSet = {}", addSet, delSet);
+
     }
 
 }
-// 1925742086911107073
-// 1925742086911107074
-// 1925742086911107075
