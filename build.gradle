@@ -26,6 +26,7 @@ repositories {
 }
 
 dependencies {
+    implementation('org.dromara.hutool:hutool-all:6.0.0-M21')
     implementation('com.baomidou:mybatis-plus-spring-boot3-starter:3.5.12')
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'

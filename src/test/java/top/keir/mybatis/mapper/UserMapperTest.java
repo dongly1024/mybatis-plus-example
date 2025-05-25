@@ -44,6 +44,7 @@ class UserMapperTest extends MybatisPlusApplicationTests {
         user.setAge(18);
         user.setEmail("keir@163.com");
         userMapper.insert(user);
+        userMapper.selectList(null).forEach(System.out::println);
     }
 
 }
