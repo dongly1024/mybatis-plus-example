@@ -16,6 +16,12 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * 先删除，再更新
+ * 1.删除
+ * <p>
+ * 2.更新
+ */
 @Slf4j
 class MaterialRelationMapperTest extends MybatisPlusApplicationTests {
 
