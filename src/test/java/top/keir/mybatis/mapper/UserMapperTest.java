@@ -47,4 +47,6 @@ class UserMapperTest extends MybatisPlusApplicationTests {
         userMapper.selectList(null).forEach(System.out::println);
     }
 
-}
+}// 1925742086911107073
+// 1925742086911107074
+// 1925742086911107075
