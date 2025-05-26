@@ -1,10 +1,7 @@
 package top.keir.mybatis.entity;
 
 import com.alibaba.fastjson2.JSON;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -19,6 +16,7 @@ public class MaterialRelation {
     private Long id;
     private String code;
     private String relation;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     @TableLogic(value = "0", delval = "1")
     private Integer isDeleted;
 
