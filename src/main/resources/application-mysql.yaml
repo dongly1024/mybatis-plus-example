@@ -1,9 +1,7 @@
 spring:
-  application:
-    name: mybatis-plus-example
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: tiger
+    username: root
     password: 123456
     url: jdbc:mysql://localhost:3306/tiger?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
 logging:
